@@ -1,0 +1,159 @@
+/* ### Primary
+
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%)
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.logo {
+  height: 25px;
+  width: 75px;
+}
+
+h1 {
+  font-weight: 100;
+  color: hsl(0, 0%, 59%);
+}
+.bold {
+  font-weight: 700;
+  color: hsl(209, 33%, 12%);
+}
+.subscribe {
+  font-weight: 500;
+  color: hsl(209, 33%, 12%);
+  margin-top: -1rem;
+}
+.input-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-field {
+  position: relative;
+}
+
+.email {
+  padding: 1rem 8rem 1rem 1.6rem;
+  border-radius: 3rem;
+  border: 1px solid hsla(0, 0%, 59%, 0.236);
+}
+
+#email::placeholder {
+  color: hsla(0, 0%, 59%, 0.4);
+  font-weight: 500;
+  font-size: 16px;
+}
+#email:focus {
+  outline: none;
+}
+
+.submit-btn {
+  padding: 1rem 4rem;
+  border-radius: 3rem;
+  border: none;
+  background-color: hsl(223, 87%, 63%);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 3px 8px 8px hsla(0, 0%, 59%, 0.4);
+  transition: 0.33px;
+}
+
+.submit-btn:hover {
+  background-color: hsla(223, 87%, 63%, 0.645);
+}
+
+@media (max-width: 700px) {
+  .input-container {
+    flex-direction: column;
+  }
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+.error {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+.error-message {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  color: hsl(354, 100%, 66%);
+  padding-top: 10px;
+  padding-left: 1.2rem;
+}
+
+.hero-image {
+  height: 25%;
+  padding-top: 1.5rem;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media-icons i {
+  color: hsl(223, 87%, 63%);
+  padding: 0.5rem;
+  font-size: 20px;
+}
+
+.social-media-icons i:hover {
+  color: white;
+}
+
+.social-media-icons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid hsla(0, 0%, 59%, 0.084);
+  cursor: pointer;
+  background-color: white;
+  transition: 0.33s;
+}
+.social-media-icons button:hover {
+  background-color: hsl(223, 87%, 63%);
+}
+
+footer {
+  font-size: 12px;
+  color: hsl(0, 0%, 59%);
+}
